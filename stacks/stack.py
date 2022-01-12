@@ -43,6 +43,7 @@ class Stack:
   #size of stack
   def get_size(self):
     return self.size
+    
   #get name of stack frame
   def get_name(self):
     return self.name
