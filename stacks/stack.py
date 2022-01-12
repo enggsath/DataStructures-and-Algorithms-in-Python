@@ -3,10 +3,11 @@ sys.path.insert(0,"/home/f_k/Desktop/DSA/Node")
 from Node import Node
 
 class Stack:
-  def __init__(self, limit=1000):
+  def __init__(self,name):
     self.top_item = None
     self.size = 0
-    self.limit = limit
+    self.limit =1000
+    self.name=name
   #add a value to stack;top of stack
   def push(self, value):
     if(self.has_space()):
@@ -38,3 +39,19 @@ class Stack:
     return self.size<self.limit
   def is_empty(self):
     return self.size==0
+
+  #size of stack
+  def get_size(self):
+    return self.size
+  #get name of stack frame
+  def get_name(self):
+    return self.name
+  #print items in stack frame
+  def print_items(self):
+    pointer = self.top_item
+    print_list = []
+    while(pointer):
+      print_list.append(pointer.get_value())
+      pointer = pointer.get_next_node()
+    print_list.reverse()
+    print("{0} Stack: {1}".format(self.get_name(), print_list))
