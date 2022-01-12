@@ -2,7 +2,7 @@
 
 from stack import Stack
 
-gym_stack=Stack(5)
+gym_stack=Stack('Sath_gym')
 gym_stack.push(100)
 gym_stack.push(50)
 gym_stack.push(25)
